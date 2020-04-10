@@ -1,6 +1,7 @@
 # Program to print the table of a given number
 
-num = 23
+# Taking input from user
+num = int(input("Enter number: "))
 
 i = 1
 
