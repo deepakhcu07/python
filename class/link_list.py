@@ -25,6 +25,20 @@ class LinkedList:
             temp = temp.next
         temp.next = new_node
 
+    def remove(self,data):
+        current = self.head
+        # If first element matches
+        if current.data == data :
+            self.head = current.next
+            return
+
+        previous = current
+        current = current.next
+        while current and current.data !=data:
+            previous = current
+            current = current.next
+        if current and current.data == data:
+            previous.next = current.next
 
     def printlist(self):
         temp = self.head
@@ -45,6 +59,10 @@ if __name__ == '__main__':
     list.append(9)
     list.append(10)
 
+    list.printlist()
+
+
+    list.remove(11)
     list.printlist()
 
 
